@@ -50,14 +50,20 @@ const Home: NextPage = () => {
                     <div className={styles.get_box}>
                       <div className={styles.get_cnt}>
                         <span className={styles.icon}>
-                          <img src="pets_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                          <img
+                            src="pets_FILL0_wght400_GRAD0_opsz48.svg"
+                            alt=""
+                          />
                         </span>
                         <span>動物の種類：</span>
                         <span className={styles.get_animals}>イノシシ</span>
                       </div>
                       <div className={styles.get_cnt}>
                         <span className={styles.icon}>
-                          <img src="history_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                          <img
+                            src="history_FILL0_wght400_GRAD0_opsz48.svg"
+                            alt=""
+                          />
                         </span>
                         <span>捕獲日時：</span>
                         <span className={styles.get_time}>2022年8月1日</span>
@@ -81,7 +87,8 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className={styles.detail_btn}>
-                  <a href="#">詳細を確認する
+                  <a href="#">
+                    詳細を確認する
                     <img src="arrow.svg" alt="" />
                   </a>
                 </div>
@@ -97,14 +104,20 @@ const Home: NextPage = () => {
                     <div className={styles.get_box}>
                       <div className={styles.get_cnt}>
                         <span className={styles.icon}>
-                          <img src="pets_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                          <img
+                            src="pets_FILL0_wght400_GRAD0_opsz48.svg"
+                            alt=""
+                          />
                         </span>
                         <span>動物の種類：</span>
                         <span className={styles.get_animals}>イノシシ</span>
                       </div>
                       <div className={styles.get_cnt}>
                         <span className={styles.icon}>
-                          <img src="history_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                          <img
+                            src="history_FILL0_wght400_GRAD0_opsz48.svg"
+                            alt=""
+                          />
                         </span>
                         <span>捕獲日時：</span>
                         <span className={styles.get_time}>2022年8月1日</span>
@@ -128,7 +141,8 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className={styles.detail_btn_desable}>
-                  <a href="#">詳細を確認する
+                  <a href="#">
+                    詳細を確認する
                     <img src="arrow.svg" alt="" />
                   </a>
                 </div>
@@ -146,14 +160,20 @@ const Home: NextPage = () => {
                     <div className={styles.get_box}>
                       <div className={styles.get_cnt}>
                         <span className={styles.icon}>
-                          <img src="pets_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                          <img
+                            src="pets_FILL0_wght400_GRAD0_opsz48.svg"
+                            alt=""
+                          />
                         </span>
                         <span>動物の種類：</span>
                         <span className={styles.get_animals}>イノシシ</span>
                       </div>
                       <div className={styles.get_cnt}>
                         <span className={styles.icon}>
-                          <img src="history_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                          <img
+                            src="history_FILL0_wght400_GRAD0_opsz48.svg"
+                            alt=""
+                          />
                         </span>
                         <span>捕獲日時：</span>
                         <span className={styles.get_time}>2022年8月1日</span>
@@ -177,7 +197,8 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className={styles.detail_btn}>
-                  <a href="#">詳細を確認する
+                  <a href="#">
+                    詳細を確認する
                     <img src="arrow.svg" alt="" />
                   </a>
                 </div>
@@ -193,14 +214,20 @@ const Home: NextPage = () => {
                     <div className={styles.get_box}>
                       <div className={styles.get_cnt}>
                         <span className={styles.icon}>
-                          <img src="pets_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                          <img
+                            src="pets_FILL0_wght400_GRAD0_opsz48.svg"
+                            alt=""
+                          />
                         </span>
                         <span>動物の種類：</span>
                         <span className={styles.get_animals}>イノシシ</span>
                       </div>
                       <div className={styles.get_cnt}>
                         <span className={styles.icon}>
-                          <img src="history_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                          <img
+                            src="history_FILL0_wght400_GRAD0_opsz48.svg"
+                            alt=""
+                          />
                         </span>
                         <span>捕獲日時：</span>
                         <span className={styles.get_time}>2022年8月1日</span>
@@ -224,7 +251,8 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className={styles.detail_btn_desable}>
-                  <a href="#">詳細を確認する
+                  <a href="#">
+                    詳細を確認する
                     <img src="arrow.svg" alt="" />
                   </a>
                 </div>
@@ -236,13 +264,12 @@ const Home: NextPage = () => {
           <div className={styles.animals_bg}>
             <div className={styles.animals_box}>
               <h1 className={styles.title}>今すぐ活かせる動物たち</h1>
-
             </div>
           </div>
         </section>
       </main>
       {/* あやのはここから上 */}
-    </div >
+    </div>
   )
 }
 
