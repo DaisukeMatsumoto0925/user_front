@@ -23,8 +23,9 @@ const Home: NextPage = () => {
       {
         // mode: 'no-cors',
       },
-    ).then((response) => console.log(response))
-    // .then((data) => console.log(data))
+    )
+      .then((response) => console.log(response))
+      .then((data) => console.log(data))
   }, [])
 
   return (
