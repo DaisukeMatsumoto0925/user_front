@@ -170,25 +170,27 @@
 }
 
 .contact {
-  display: inline-flex;
+  display: flex;
   width: 100%;
 }
 
 .contact a {
+  display: block;
   width: 100%;
   text-align: center;
-  box-shadow: 0px 3px 16px #24000024;
   padding: 12px 0;
   background: #ffa72f;
   border-radius: 99px;
   width: 100%;
   color: #fff;
   font-weight: bold;
+  box-shadow: 0px 3px 16px #24000024;
+  transition: all 0.3s;
 }
 
 .contact a:hover {
   box-shadow: none;
-  opacity: 0.9s;
+  opacity: 0.9;
 }
 
 .arrow {

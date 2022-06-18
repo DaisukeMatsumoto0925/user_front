@@ -10,16 +10,18 @@
   background-position: top 0;
   background-repeat: no-repeat;
   background-color: rgba(51, 165, 152, 0.08);
-  padding-top: 90px;
-}
+  /* padding-top: 90px; */
+}s
 
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 16px 40px;
   width: 100%;
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
+  z-index: 99;
 }
 
 .logo {
@@ -39,23 +41,44 @@
   margin-right: 12px;
 }
 
-.signin a {
-  display: inline-flex;
+.signin {
+  display: flex;
+  align-items: center;
   background: #fff;
   border: 1px solid #33a598;
   border-radius: 99px;
-  padding: 8px 32px;
   color: #33a598;
   font-weight: bold;
+    padding: 8px 32px;
 }
 
-.signup a {
-  display: inline-flex;
+.signup {
+  display: flex;
+  align-items: center;
   background: #ffa72f;
   border-radius: 99px;
-  padding: 8px 32px;
   color: #fff;
   font-weight: bold;
+  padding: 0 32px;
+}
+
+.signin,
+.signup{
+  transition: all 0.3s;
+  box-shadow: 0px 3px 16px #24000024;
+  height: 40px;
+}
+
+.signin a,
+.signup a{
+  width: 100%;
+  display: block;
+}
+
+.signin:hover,
+.signup:hover {
+  box-shadow: none;
+  opacity: 0.9;
 }
 
 .mv_img {
@@ -191,11 +214,16 @@
   color: #fff;
   font-weight: bold;
   display: flex;
+    transition: all 0.3s;
 }
 
 .detail_btn a {
   width: 100%;
   display: block;
+}
+
+.detail_btn:hover {
+  opacity: 0.9;
 }
 
 .detail_btn img {
