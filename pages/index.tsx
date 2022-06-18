@@ -69,13 +69,19 @@ const Home: NextPage = () => {
                     <div key={i} className={styles.animals_01_cnt}>
                       <div className={styles.animals_01_cnt_group}>
                         <div className={styles.wana}>
-                          <img src="wana_01.png" alt="" />
+                          <img src={getTrapImage(v.trap_type.value)} />
                           <div className={styles.wana_type}>
                             {v.trap_type.value}
                           </div>
                         </div>
                         <div className={styles.animals_01_block}>
-                          <div className={styles.state_get}>
+                          <div
+                            className={
+                              v.trap_status.value === '捕獲'
+                                ? styles.state_get
+                                : styles.state_stay
+                            }
+                          >
                             {v.trap_status.value}
                           </div>
                           <div className={styles.get_box}>
@@ -121,7 +127,13 @@ const Home: NextPage = () => {
                           </ul>
                         </div>
                       </div>
-                      <div className={styles.detail_btn}>
+                      <div
+                        className={
+                          v.trap_status.value === '捕獲'
+                            ? styles.detail_btn
+                            : styles.detail_btn_desable
+                        }
+                      >
                         <a href="#">
                           詳細を確認する
                           <img src="arrow.svg" alt="" />
@@ -130,224 +142,6 @@ const Home: NextPage = () => {
                     </div>
                   )
                 })}
-              {/* <div className={styles.animals_01_cnt}>
-                <div className={styles.animals_01_cnt_group}>
-                  <div className={styles.wana}>
-                    <img src="wana_01.png" alt="" />
-                    <div className={styles.wana_type}>おり罠</div>
-                  </div>
-                  <div className={styles.animals_01_block}>
-                    <div className={styles.state_get}>ワナにかかった !</div>
-                    <div className={styles.get_box}>
-                      <div className={styles.get_cnt}>
-                        <span className={styles.icon}>
-                          <img
-                            src="pets_FILL0_wght400_GRAD0_opsz48.svg"
-                            alt=""
-                          />
-                        </span>
-                        <span>動物の種類：</span>
-                        <span className={styles.get_animals}>イノシシ</span>
-                      </div>
-                      <div className={styles.get_cnt}>
-                        <span className={styles.icon}>
-                          <img
-                            src="history_FILL0_wght400_GRAD0_opsz48.svg"
-                            alt=""
-                          />
-                        </span>
-                        <span>捕獲日時：</span>
-                        <span className={styles.get_time}>2022年8月1日</span>
-                      </div>
-                    </div>
-                    <ul className={styles.basic}>
-                      <li>
-                        <span>仕掛け日時：</span>
-                        <span>2022年7月1日</span>
-                      </li>
-                      <li>
-                        <span>場所：</span>
-                        <span>会津町</span>
-                      </li>
-                      <li>
-                        <span>設置者</span>
-                        <span>会津 太郎</span>
-                      </li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={styles.detail_btn}>
-                  <a href="#">
-                    詳細を確認する
-                    <img src="arrow.svg" alt="" />
-                  </a>
-                </div>
-              </div>
-              <div className={styles.animals_01_cnt}>
-                <div className={styles.animals_01_cnt_group}>
-                  <div className={styles.wana}>
-                    <img src="wana_02.png" alt="" />
-                    <div className={styles.wana_type}>くくり罠</div>
-                  </div>
-                  <div className={styles.animals_01_block}>
-                    <div className={styles.state_stay}>現在状態確認中</div>
-                    <div className={styles.get_box}>
-                      <div className={styles.get_cnt}>
-                        <span className={styles.icon}>
-                          <img
-                            src="pets_FILL0_wght400_GRAD0_opsz48.svg"
-                            alt=""
-                          />
-                        </span>
-                        <span>動物の種類：</span>
-                        <span className={styles.get_animals}>イノシシ</span>
-                      </div>
-                      <div className={styles.get_cnt}>
-                        <span className={styles.icon}>
-                          <img
-                            src="history_FILL0_wght400_GRAD0_opsz48.svg"
-                            alt=""
-                          />
-                        </span>
-                        <span>捕獲日時：</span>
-                        <span className={styles.get_time}>2022年8月1日</span>
-                      </div>
-                    </div>
-                    <ul className={styles.basic}>
-                      <li>
-                        <span>仕掛け日時：</span>
-                        <span>2022年7月1日</span>
-                      </li>
-                      <li>
-                        <span>場所：</span>
-                        <span>会津町</span>
-                      </li>
-                      <li>
-                        <span>設置者</span>
-                        <span>会津 太郎</span>
-                      </li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={styles.detail_btn_desable}>
-                  <a href="#">
-                    詳細を確認する
-                    <img src="arrow.svg" alt="" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className={styles.animals_01_glupe}>
-              <div className={styles.animals_01_cnt}>
-                <div className={styles.animals_01_cnt_group}>
-                  <div className={styles.wana}>
-                    <img src="wana_01.png" alt="" />
-                    <div className={styles.wana_type}>おり罠</div>
-                  </div>
-                  <div className={styles.animals_01_block}>
-                    <div className={styles.state_get}>ワナにかかった !</div>
-                    <div className={styles.get_box}>
-                      <div className={styles.get_cnt}>
-                        <span className={styles.icon}>
-                          <img
-                            src="pets_FILL0_wght400_GRAD0_opsz48.svg"
-                            alt=""
-                          />
-                        </span>
-                        <span>動物の種類：</span>
-                        <span className={styles.get_animals}>イノシシ</span>
-                      </div>
-                      <div className={styles.get_cnt}>
-                        <span className={styles.icon}>
-                          <img
-                            src="history_FILL0_wght400_GRAD0_opsz48.svg"
-                            alt=""
-                          />
-                        </span>
-                        <span>捕獲日時：</span>
-                        <span className={styles.get_time}>2022年8月1日</span>
-                      </div>
-                    </div>
-                    <ul className={styles.basic}>
-                      <li>
-                        <span>仕掛け日時：</span>
-                        <span>2022年7月1日</span>
-                      </li>
-                      <li>
-                        <span>場所：</span>
-                        <span>会津町</span>
-                      </li>
-                      <li>
-                        <span>設置者</span>
-                        <span>会津 太郎</span>
-                      </li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={styles.detail_btn}>
-                  <a href="#">
-                    詳細を確認する
-                    <img src="arrow.svg" alt="" />
-                  </a>
-                </div>
-              </div>
-              <div className={styles.animals_01_cnt}>
-                <div className={styles.animals_01_cnt_group}>
-                  <div className={styles.wana}>
-                    <img src="wana_02.png" alt="" />
-                    <div className={styles.wana_type}>くくり罠</div>
-                  </div>
-                  <div className={styles.animals_01_block}>
-                    <div className={styles.state_stay}>現在状態確認中</div>
-                    <div className={styles.get_box}>
-                      <div className={styles.get_cnt}>
-                        <span className={styles.icon}>
-                          <img
-                            src="pets_FILL0_wght400_GRAD0_opsz48.svg"
-                            alt=""
-                          />
-                        </span>
-                        <span>動物の種類：</span>
-                        <span className={styles.get_animals}>イノシシ</span>
-                      </div>
-                      <div className={styles.get_cnt}>
-                        <span className={styles.icon}>
-                          <img
-                            src="history_FILL0_wght400_GRAD0_opsz48.svg"
-                            alt=""
-                          />
-                        </span>
-                        <span>捕獲日時：</span>
-                        <span className={styles.get_time}>2022年8月1日</span>
-                      </div>
-                    </div>
-                    <ul className={styles.basic}>
-                      <li>
-                        <span>仕掛け日時：</span>
-                        <span>2022年7月1日</span>
-                      </li>
-                      <li>
-                        <span>場所：</span>
-                        <span>会津町</span>
-                      </li>
-                      <li>
-                        <span>設置者</span>
-                        <span>会津 太郎</span>
-                      </li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={styles.detail_btn_desable}>
-                  <a href="#">
-                    詳細を確認する
-                    <img src="arrow.svg" alt="" />
-                  </a>
-                </div>
-              </div> */}
             </div>
           </div>
         </section>
@@ -472,3 +266,16 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+const getTrapImage = (trap: string): string => {
+  switch (trap) {
+    case '落とし穴':
+      return 'wana_01.png'
+    case 'カゴ':
+      return 'wana_01.png'
+    case 'くくり罠':
+      return 'wana_02.png'
+    default:
+      return ''
+  }
+}

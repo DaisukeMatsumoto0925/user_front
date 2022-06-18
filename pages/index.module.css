@@ -91,7 +91,7 @@
 
 .animals_01_cnt {
   width: calc(50% - 24px);
-  margin: 0 12px;
+  margin: 10px 12px;
   background: #fff;
   border-radius: 6px;
   box-shadow: 0px 3px 16px #002E2A1A;
