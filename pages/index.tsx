@@ -207,7 +207,7 @@ const Home: NextPage = () => {
                               <span>{v.location.value}</span>
                             </li>
                             <li>
-                              <span>設置者</span>
+                              <span>設置者：</span>
                               <span>{v.establisher.value}</span>
                             </li>
                           </ul>
