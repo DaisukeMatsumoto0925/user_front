@@ -1,9 +1,32 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useEffect } from 'react'
 
 import styles from './index.module.css'
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    // const axios = new Axios()
+    // axios
+    //   .get(
+    //     'https://2qbewbwhu2.execute-api.ap-northeast-1.amazonaws.com/prod/huntings',
+    //   )
+    //   .then((data) => {
+    //     console.log(data)
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //   })
+
+    fetch(
+      'https://2qbewbwhu2.execute-api.ap-northeast-1.amazonaws.com/prod/huntings',
+      {
+        // mode: 'no-cors',
+      },
+    ).then((response) => console.log(response))
+    // .then((data) => console.log(data))
+  }, [])
+
   return (
     <div>
       <Head>
