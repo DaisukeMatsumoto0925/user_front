@@ -42,9 +42,7 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
           <div className={styles.animals_01_flex}>
             <div className={styles.wana}>
               <img src={getTrapImage(recode?.trap_type?.value)} />
-              <div className={styles.wana_type}>
-                {recode?.trap_type?.value}
-              </div>
+              <div className={styles.wana_type}>{recode?.trap_type?.value}</div>
             </div>
             <div className={styles.animals_01_block}>
               <div
@@ -59,10 +57,7 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
               <div className={styles.get_box}>
                 <div className={styles.get_cnt}>
                   <span className={styles.icon}>
-                    <img
-                      src="pets_FILL0_wght400_GRAD0_opsz48.svg"
-                      alt=""
-                    />
+                    <img src="pets_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
                   </span>
                   <span>動物の種類：</span>
                   <span className={styles.get_animals}>
@@ -71,10 +66,7 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
                 </div>
                 <div className={styles.get_cnt}>
                   <span className={styles.icon}>
-                    <img
-                      src="history_FILL0_wght400_GRAD0_opsz48.svg"
-                      alt=""
-                    />
+                    <img src="history_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
                   </span>
                   <span>捕獲日時：</span>
                   <span className={styles.get_time}>
@@ -121,7 +113,6 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
             <a href="#">所有者に連絡する</a>
           </div>
         </div>
-
       </div>
       {/* ここまで */}
     </Modal>
