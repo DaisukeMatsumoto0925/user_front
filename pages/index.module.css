@@ -94,12 +94,13 @@
 
 .animals_01_glupe {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .animals_01_cnt {
   width: calc(50% - 24px);
+  margin: 0 12px;
   background: #fff;
   border-radius: 6px;
   box-shadow: 0px 3px 16px #002E2A1A;
