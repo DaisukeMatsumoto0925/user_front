@@ -240,7 +240,7 @@ const getTrapImage = (trap: string): string => {
   switch (trap) {
     case '落とし穴':
       return 'wana_01.png'
-    case 'カゴ':
+    case '箱罠':
       return 'wana_01.png'
     case 'くくり罠':
       return 'wana_02.png'
@@ -253,7 +253,7 @@ const getRawTrapImage = (trap: string): string => {
   switch (trap) {
     case '落とし穴':
       return 'nowana_01.png'
-    case 'カゴ':
+    case '箱罠':
       return 'nowana_01.png'
     case 'くくり罠':
       return 'nowana_02.png'
