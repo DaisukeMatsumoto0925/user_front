@@ -187,7 +187,7 @@ const Home: NextPage = () => {
               <div className={styles.animals_01_cnt}>
                 <div className={styles.animals_01_cnt_group}>
                   <div className={styles.wana}>
-                    <img src="wana_01.png" alt="" />
+                    <img src="wana_02.png" alt="" />
                     <div className={styles.wana_type}>くくり罠</div>
                   </div>
                   <div className={styles.animals_01_block}>
@@ -297,7 +297,7 @@ const Home: NextPage = () => {
               <div className={styles.animals_01_cnt}>
                 <div className={styles.animals_01_cnt_group}>
                   <div className={styles.wana}>
-                    <img src="wana_01.png" alt="" />
+                    <img src="wana_02.png" alt="" />
                     <div className={styles.wana_type}>くくり罠</div>
                   </div>
                   <div className={styles.animals_01_block}>
@@ -351,13 +351,120 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section className={styles.animals_02}>
           <div className={styles.animals_bg}>
             <div className={styles.animals_box}>
-              <h1 className={styles.title}>今すぐ活かせる動物たち</h1>
+              <h1 className={styles.title}>見守り中のワナ</h1>
+              <div className={styles.animals_02_block}>
+                <div className={styles.animals_02_box}>
+                  <div className={styles.wana_02}>
+                    <img src="nowana_01.png" alt="" />
+                    <div className={styles.wana_type}>おり罠</div>
+                  </div>
+                  <div className={styles.animals_02_detail}>
+                    <div className={styles.state_yet}>ワナ見守り中</div>
+                    <ul className={styles.basic}>
+                      <li>
+                        <span>仕掛け日時：</span>
+                        <span>2022年7月1日</span>
+                      </li>
+                      <li>
+                        <span>場所：</span>
+                        <span>会津町</span>
+                      </li>
+                      <li>
+                        <span>設置者</span>
+                        <span>会津 太郎</span>
+                      </li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className={styles.animals_02_box}>
+                  <div className={styles.wana_02}>
+                    <img src="nowana_02.png" alt="" />
+                    <div className={styles.wana_type}>くくり罠</div>
+                  </div>
+                  <div className={styles.animals_02_detail}>
+                    <div className={styles.state_yet}>ワナ見守り中</div>
+                    <ul className={styles.basic}>
+                      <li>
+                        <span>仕掛け日時：</span>
+                        <span>2022年7月1日</span>
+                      </li>
+                      <li>
+                        <span>場所：</span>
+                        <span>会津町</span>
+                      </li>
+                      <li>
+                        <span>設置者</span>
+                        <span>会津 太郎</span>
+                      </li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className={styles.animals_02_box}>
+                  <div className={styles.wana_02}>
+                    <img src="nowana_01.png" alt="" />
+                    <div className={styles.wana_type}>おり罠</div>
+                  </div>
+                  <div className={styles.animals_02_detail}>
+                    <div className={styles.state_yet}>ワナ見守り中</div>
+                    <ul className={styles.basic}>
+                      <li>
+                        <span>仕掛け日時：</span>
+                        <span>2022年7月1日</span>
+                      </li>
+                      <li>
+                        <span>場所：</span>
+                        <span>会津町</span>
+                      </li>
+                      <li>
+                        <span>設置者</span>
+                        <span>会津 太郎</span>
+                      </li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className={styles.animals_02_box}>
+                  <div className={styles.wana_02}>
+                    <img src="nowana_02.png" alt="" />
+                    <div className={styles.wana_type}>くくり罠</div>
+                  </div>
+                  <div className={styles.animals_02_detail}>
+                    <div className={styles.state_yet}>ワナ見守り中</div>
+                    <ul className={styles.basic}>
+                      <li>
+                        <span>仕掛け日時：</span>
+                        <span>2022年7月1日</span>
+                      </li>
+                      <li>
+                        <span>場所：</span>
+                        <span>会津町</span>
+                      </li>
+                      <li>
+                        <span>設置者</span>
+                        <span>会津 太郎</span>
+                      </li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+        <footer>
+          <div className={styles.footer}>
+            <div className={styles.logo}>
+              <img src="logo.svg" alt="" />
+              <p className={styles.tagline}>野生動物のオープンソース</p>
+            </div>
+            <div className={styles.copy}>©2022 Miraidoubutsuen.</div>
+          </div>
+        </footer>
       </main>
       {/* あやのはここから上 */}
     </div>
