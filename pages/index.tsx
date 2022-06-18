@@ -139,14 +139,14 @@ const Home: NextPage = () => {
                           <ul className={styles.basic}>
                             <li>
                               <span>仕掛け日時：</span>
-                              <span>{v.created_at.value}</span>
+                              <span>{v.set_trap_at.value}</span>
                             </li>
                             <li>
                               <span>場所：</span>
                               <span>{v.location.value}</span>
                             </li>
                             <li>
-                              <span>設置者</span>
+                              <span>設置者：</span>
                               <span>{v.establisher.value}</span>
                             </li>
                             <li></li>
@@ -176,102 +176,45 @@ const Home: NextPage = () => {
             <div className={styles.animals_box}>
               <h1 className={styles.title}>見守り中のワナ</h1>
               <div className={styles.animals_02_block}>
-                <div className={styles.animals_02_box}>
-                  <div className={styles.wana_02}>
-                    <img src="nowana_01.png" alt="" />
-                    <div className={styles.wana_type}>おり罠</div>
-                  </div>
-                  <div className={styles.animals_02_detail}>
-                    <div className={styles.state_yet}>ワナ見守り中</div>
-                    <ul className={styles.basic}>
-                      <li>
-                        <span>仕掛け日時：</span>
-                        <span>2022年7月1日</span>
-                      </li>
-                      <li>
-                        <span>場所：</span>
-                        <span>会津町</span>
-                      </li>
-                      <li>
-                        <span>設置者</span>
-                        <span>会津 太郎</span>
-                      </li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={styles.animals_02_box}>
-                  <div className={styles.wana_02}>
-                    <img src="nowana_02.png" alt="" />
-                    <div className={styles.wana_type}>くくり罠</div>
-                  </div>
-                  <div className={styles.animals_02_detail}>
-                    <div className={styles.state_yet}>ワナ見守り中</div>
-                    <ul className={styles.basic}>
-                      <li>
-                        <span>仕掛け日時：</span>
-                        <span>2022年7月1日</span>
-                      </li>
-                      <li>
-                        <span>場所：</span>
-                        <span>会津町</span>
-                      </li>
-                      <li>
-                        <span>設置者</span>
-                        <span>会津 太郎</span>
-                      </li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={styles.animals_02_box}>
-                  <div className={styles.wana_02}>
-                    <img src="nowana_01.png" alt="" />
-                    <div className={styles.wana_type}>おり罠</div>
-                  </div>
-                  <div className={styles.animals_02_detail}>
-                    <div className={styles.state_yet}>ワナ見守り中</div>
-                    <ul className={styles.basic}>
-                      <li>
-                        <span>仕掛け日時：</span>
-                        <span>2022年7月1日</span>
-                      </li>
-                      <li>
-                        <span>場所：</span>
-                        <span>会津町</span>
-                      </li>
-                      <li>
-                        <span>設置者</span>
-                        <span>会津 太郎</span>
-                      </li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={styles.animals_02_box}>
-                  <div className={styles.wana_02}>
-                    <img src="nowana_02.png" alt="" />
-                    <div className={styles.wana_type}>くくり罠</div>
-                  </div>
-                  <div className={styles.animals_02_detail}>
-                    <div className={styles.state_yet}>ワナ見守り中</div>
-                    <ul className={styles.basic}>
-                      <li>
-                        <span>仕掛け日時：</span>
-                        <span>2022年7月1日</span>
-                      </li>
-                      <li>
-                        <span>場所：</span>
-                        <span>会津町</span>
-                      </li>
-                      <li>
-                        <span>設置者</span>
-                        <span>会津 太郎</span>
-                      </li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
+                {data
+                  .filter((v: any) => {
+                    return (
+                      v.trap_status.value === '設置済み' ||
+                      v.trap_status.value === '回収済み'
+                    )
+                  })
+                  .map((v: any, i) => {
+                    return (
+                      <div className={styles.animals_02_box} key={i}>
+                        <div className={styles.wana_02}>
+                          <img
+                            src={getRawTrapImage(v.trap_type.value)}
+                            alt=""
+                          />
+                          <div className={styles.wana_type}>
+                            {v.trap_type.value}
+                          </div>
+                        </div>
+                        <div className={styles.animals_02_detail}>
+                          <div className={styles.state_yet}>ワナ見守り中</div>
+                          <ul className={styles.basic}>
+                            <li>
+                              <span>仕掛け日時：</span>
+                              <span>{v.set_trap_at.value}</span>
+                            </li>
+                            <li>
+                              <span>場所：</span>
+                              <span>{v.location.value}</span>
+                            </li>
+                            <li>
+                              <span>設置者</span>
+                              <span>{v.establisher.value}</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    )
+                  })}
               </div>
             </div>
           </div>
@@ -301,6 +244,19 @@ const getTrapImage = (trap: string): string => {
       return 'wana_01.png'
     case 'くくり罠':
       return 'wana_02.png'
+    default:
+      return ''
+  }
+}
+
+const getRawTrapImage = (trap: string): string => {
+  switch (trap) {
+    case '落とし穴':
+      return 'nowana_01.png'
+    case 'カゴ':
+      return 'nowana_01.png'
+    case 'くくり罠':
+      return 'nowana_02.png'
     default:
       return ''
   }
