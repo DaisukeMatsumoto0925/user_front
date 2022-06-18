@@ -1,11 +1,7 @@
 /* modal */
 /* ---------------------------------------- */
 .modal {
-  background-color: white;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  width: 1069px;
-  height: 558px;
+  width: 600px;
 }
 
 .overlay {

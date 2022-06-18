@@ -20,23 +20,10 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
       ariaHideApp={false}
       overlayClassName={styles.overlay}
     >
-      {/* このデーターを使いなさい */}
-      {recode?.trap_type?.value}
-      {recode?.dealing_status?.value}
-      {recode?.animal_name?.value}
-      {recode?.weight?.value}
-      {recode?.height?.value}
-      {recode?.sex?.value}
-      {recode?.caught_at?.value}
-      {recode?.location?.value}
-      {recode?.memo?.value}
-      {recode?.created_at?.value}
-      {recode?.updated_at?.value}
-      {/* あやのはここから */}
       <div>
         <div className={styles.detail_title}>
           <div>捕獲動物の詳細</div>
-          <span className={styles.batsu}></span>
+          <span className={styles.batsu} onClick={closeModal}></span>
         </div>
         <div className={styles.animals_01_cnt_group}>
           <div className={styles.animals_01_flex}>
@@ -77,7 +64,7 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
               <ul className={styles.basic}>
                 <li>
                   <span>仕掛け日時：</span>
-                  <span>{recode?.created_at?.value}</span>
+                  <span>{recode?.set_trap_at?.value}</span>
                 </li>
                 <li>
                   <span>場所：</span>
@@ -94,19 +81,19 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
           <div className={styles.detals_box}>
             <div>
               <span className={styles.detals_title}>推定の体長</span>
-              <span>150cm</span>
+              <span>{recode?.height?.value}cm</span>
             </div>
             <div>
               <span className={styles.detals_title}>推定の体重</span>
-              <span>100kg</span>
+              <span>{recode?.weight?.value}kg</span>
             </div>
             <div>
               <span className={styles.detals_title}>性別</span>
-              <span>雄♂</span>
+              <span> {recode?.sex?.value}</span>
             </div>
             <div>
               <span className={styles.detals_title}>メモ</span>
-              <span>食肉も可能です。</span>
+              <span> {recode?.memo?.value}</span>
             </div>
           </div>
           <div className={styles.contact}>
@@ -114,7 +101,6 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
           </div>
         </div>
       </div>
-      {/* ここまで */}
     </Modal>
   )
 }
