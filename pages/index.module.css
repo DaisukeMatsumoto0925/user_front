@@ -90,8 +90,8 @@
 }
 
 .animals_01_cnt {
-  width: calc(50% - 24px);
-  margin: 10px 12px;
+  width: calc(50% - 40px);
+  margin: 20px 20px;
   background: #fff;
   border-radius: 6px;
   box-shadow: 0px 3px 16px #002E2A1A;
@@ -243,16 +243,16 @@
 
 .animals_02_block {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .animals_02_box {
-  width: 25%;
+  width: calc(25% - 32px);
+  margin: 10px 16px;
   max-width: 276px;
-  height: 220px;
+  height: 390px;
   display: inline-block;
   position: relative;
-
 }
 
 .wana_02 {
