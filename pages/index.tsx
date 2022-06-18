@@ -2,10 +2,24 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 
+import HuntModal from '@/components/modal'
+
 import styles from './index.module.css'
 
 const Home: NextPage = () => {
   const [data, setData] = useState([])
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [recode, setRecode] = useState({})
+  console.log(recode)
+
+  const openModal = () => {
+    setModalIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setModalIsOpen(false)
+  }
+
   useEffect(() => {
     fetch(
       'https://2qbewbwhu2.execute-api.ap-northeast-1.amazonaws.com/prod/huntings',
@@ -29,6 +43,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <HuntModal
+        modalIsOpen={modalIsOpen}
+        closeModal={closeModal}
+        recode={recode}
+      />
       {/* あやのはここから下 */}
       <div className={styles.mv}>
         <header>
@@ -66,7 +85,14 @@ const Home: NextPage = () => {
                 })
                 .map((v: any, i) => {
                   return (
-                    <div key={i} className={styles.animals_01_cnt}>
+                    <div
+                      key={i}
+                      className={styles.animals_01_cnt}
+                      onClick={() => {
+                        openModal()
+                        setRecode(v)
+                      }}
+                    >
                       <div className={styles.animals_01_cnt_group}>
                         <div className={styles.wana}>
                           <img src={getTrapImage(v.trap_type.value)} />
