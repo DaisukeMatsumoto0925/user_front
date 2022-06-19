@@ -97,7 +97,7 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
             </div>
           </div>
           <div className={styles.contact}>
-            <a href="#">所有者に連絡する</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScUSckX7a_LnlSA9yUGY0J7WLr8cy4DbjhkaRJa-cQNwp4uGg/viewform" target="_blank" rel="noopener noreferrer">所有者に連絡する</a>
           </div>
         </div>
       </div>
