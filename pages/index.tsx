@@ -54,7 +54,7 @@ const Home: NextPage = () => {
           <div className={styles.header}>
             <div className={styles.logo}>
               <img src="logo.svg" alt="" />
-              <p className={styles.tagline}>野生動物のオープンソース</p>
+              {/* <p className={styles.tagline}>野生動物のオープンソース</p> */}
             </div>
             <div className={styles.header_btn}>
               <div className={styles.signin}>
@@ -162,7 +162,7 @@ const Home: NextPage = () => {
                       >
                         <a href="#">
                           詳細を確認する
-                          <img src="arrow.svg" alt="" />
+                          <img src="play_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
                         </a>
                       </div>
                     </div>
@@ -222,8 +222,8 @@ const Home: NextPage = () => {
         <footer>
           <div className={styles.footer}>
             <div className={styles.logo}>
-              <img src="logo.svg" alt="" />
-              <p className={styles.tagline}>野生動物のオープンソース</p>
+              <img src="logo_bottom.svg" alt="" />
+              {/* <p className={styles.tagline}>野生動物のオープンソース</p> */}
             </div>
             <div className={styles.copy}>©2022 Miraidoubutsuen.</div>
           </div>

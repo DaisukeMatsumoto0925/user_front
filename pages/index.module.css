@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 40px;
+  padding: 20px 40px 10px;
   width: 100%;
   /* position: fixed;
   top: 0; */
@@ -29,8 +29,8 @@
 }
 
 .tagline {
-  font-size: 14.5px;
-  margin-top: 5px;
+  font-size: 14px;
+  margin-top: 20px;
 }
 
 .header_btn {
