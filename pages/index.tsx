@@ -151,7 +151,7 @@ const Home: NextPage = () => {
                           <ul className={styles.basic}>
                             <li>
                               <span>仕掛け日時：</span>
-                              <span>{v.set_trap_at.value}</span>
+                              <span>{toJst(v.set_trap_at.value)}</span>
                             </li>
                             <li>
                               <span>場所：</span>
