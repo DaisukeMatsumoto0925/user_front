@@ -162,7 +162,10 @@ const Home: NextPage = () => {
                       >
                         <a href="#">
                           詳細を確認する
-                          <img src="play_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                          <img
+                            src="play_circle_FILL0_wght400_GRAD0_opsz48.svg"
+                            alt=""
+                          />
                         </a>
                       </div>
                     </div>
