@@ -57,14 +57,14 @@ const HuntModal = ({ modalIsOpen, closeModal, recode }: HuntModalProps) => {
                   </span>
                   <span>捕獲日時：</span>
                   <span className={styles.get_time}>
-                    {recode?.caught_at?.value}
+                    {toJst(recode?.caught_at?.value)}
                   </span>
                 </div>
               </div>
               <ul className={styles.basic}>
                 <li>
                   <span>仕掛け日時：</span>
-                  <span>{recode?.set_trap_at?.value}</span>
+                  <span>{toJst(recode?.set_trap_at?.value)}</span>
                 </li>
                 <li>
                   <span>場所：</span>
@@ -123,4 +123,15 @@ const getTrapImage = (trap: string): string => {
     default:
       return ''
   }
+}
+
+const toJst = (date: string): string => {
+  const jst = new Date(date)
+  const y = jst.getFullYear()
+  const m = jst.getMonth()
+  const d = jst.getDate()
+  const h = jst.getHours()
+  const min = jst.getMinutes()
+
+  return y + '/' + m + '/' + d + ' ' + h + ':' + min
 }
