@@ -57,10 +57,20 @@ const Home: NextPage = () => {
               {/* <p className={styles.tagline}>野生動物のオープンソース</p> */}
             </div>
             <div className={styles.header_btn}>
-              <div className={styles.signin}>
+              <div
+                className={styles.signin}
+                onClick={() => {
+                  alert('こちらの機能は現在実装中です。')
+                }}
+              >
                 <a href="#">ログイン</a>
               </div>
-              <div className={styles.signup}>
+              <div
+                className={styles.signup}
+                onClick={() => {
+                  alert('こちらの機能は現在実装中です。')
+                }}
+              >
                 <a href="#">会員登録</a>
               </div>
             </div>
@@ -89,8 +99,10 @@ const Home: NextPage = () => {
                       key={i}
                       className={styles.animals_01_cnt}
                       onClick={() => {
-                        openModal()
-                        setRecode(v)
+                        if (v.trap_status.value === '捕獲') {
+                          openModal()
+                          setRecode(v)
+                        }
                       }}
                     >
                       <div className={styles.animals_01_cnt_group}>
@@ -108,7 +120,7 @@ const Home: NextPage = () => {
                                 : styles.state_stay
                             }
                           >
-                            {v.trap_status.value}
+                            {getStatusText(v.trap_status.value)}
                           </div>
                           <div className={styles.get_box}>
                             <div className={styles.get_cnt}>
@@ -260,6 +272,17 @@ const getRawTrapImage = (trap: string): string => {
       return 'nowana_01.png'
     case 'くくり罠':
       return 'nowana_02.png'
+    default:
+      return ''
+  }
+}
+
+const getStatusText = (trap: string): string => {
+  switch (trap) {
+    case '捕獲':
+      return '罠にかかった！'
+    case '確認済み':
+      return '現在状態確認中'
     default:
       return ''
   }
